@@ -10,7 +10,6 @@ print(addr)
 msg = ''
 
 while True:
-	conn, addr = sock.accept()
 	data = conn.recv(1024)
 	if data=='exit':
 		break
