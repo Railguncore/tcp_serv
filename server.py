@@ -2,7 +2,7 @@ import socket
 
 sock = socket.socket()
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-sock.bind(('', 9090))
+sock.bind(('', 9091))
 sock.listen(10)
 conn, addr = sock.accept()
 print(addr)
@@ -10,6 +10,7 @@ print(addr)
 msg = ''
 
 while True:
+	conn, addr = sock.accept()
 	data = conn.recv(1024)
 	if data=='exit':
 		break
