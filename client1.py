@@ -6,7 +6,7 @@ sock.setblocking(1)
 sock.connect(('10.4.33.66', 9090))
 msg=''
 while msg!='exit':
-    msg = input('Enter data')
+    msg = input('Enter data ')
     if msg!='exit':
         msg+='\n'
     sock.send(msg.encode())
