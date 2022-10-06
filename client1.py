@@ -3,7 +3,7 @@ from time import sleep
 
 sock = socket.socket()
 sock.setblocking(1)
-sock.connect(('10.4.33.66', 9091))
+sock.connect(('10.4.33.66', 9090))
 msg=''
 while msg!='exit':
     msg = input('Enter data')
