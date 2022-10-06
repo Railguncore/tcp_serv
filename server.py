@@ -11,7 +11,7 @@ msg = ''
 
 while True:
 	data = conn.recv(1024)
-	if not data or data=='exit':
+	if data=='exit':
 		break
 	msg += data.decode()
 	conn.send(data.upper())
